@@ -133,7 +133,7 @@ def get_eigen_values_and_vectors(M, k):
     ### YOUR CODE HERE
     w,v = eigen_decomp(M)
     indx = np.argsort(np.absolute(w))
-    indx = indx[:k]
+    indx = indx[-k:]
     eigenvalues = w[indx]
     eigenvectors = v[indx]
     
